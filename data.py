@@ -54,12 +54,14 @@ def get_move(name):
             break
     return result
 
+
 def get_move_type(name):
     move = get_move(name)
     if move:
         return types[int(move['type_id']) - 1]['identifier']
     print('Move not found: ' + name)
     return None
+
 
 def get_move_power(name):
     move = get_move(name)
