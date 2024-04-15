@@ -20,14 +20,39 @@ def csv_to_json(csvFilePath, jsonFilePath):
         jsonString = json.dumps(jsonArray, indent=4)
         jsonf.write(jsonString)
           
-csvFilePath = r'./data/csv_raw/types.csv'
-jsonFilePath = r'./data/types.json'
 
-start = time.perf_counter()
-csv_to_json(csvFilePath, jsonFilePath)
-finish = time.perf_counter()
+scv_list = ['pokemon.csv', 'pokemon_types.csv', 'moves.csv', 'types.csv', 'pokemon_stats.csv']
+scv_list = ['pokemon_stats.csv']
 
-# pokemon = open_csv('./data/pokemon.csv')
-# pokemon_types = open_csv('./data/pokemon_types.csv')
-# moves = open_csv('./data/moves.csv')
+for csv_file in scv_list:
+    csvFilePath = './data/csv_raw/' + csv_file
+    jsonFilePath = './data/' + csv_file[:-4] + '.json'
 
+    start = time.perf_counter()
+    csv_to_json(csvFilePath, jsonFilePath)
+    finish = time.perf_counter()
+
+types = {}
+result = {}
+with open('./data/types.json') as json_file:
+    types = json.load(json_file)
+    for type in types:
+        result[type['id']] = type['identifier']
+
+with open('./data/types.json', 'w', encoding='utf-8') as jsonf: 
+    jsonString = json.dumps(result)
+    jsonf.write(jsonString)
+types = result
+
+result = {}
+with open('./data/pokemon_types.json') as json_file:
+    pokemon_types = json.load(json_file)
+    for pokemon_type in pokemon_types:
+        if pokemon_type['pokemon_id'] not in result.keys():
+            result[pokemon_type['pokemon_id']] = [types[pokemon_type['type_id']]]
+        else:
+            result[pokemon_type['pokemon_id']].append(types[pokemon_type['type_id']])
+
+with open('./data/pokemon_types.json', 'w', encoding='utf-8') as jsonf: 
+    jsonString = json.dumps(result)
+    jsonf.write(jsonString)

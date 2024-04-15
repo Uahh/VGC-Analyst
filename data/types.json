@@ -1,122 +1,22 @@
-[
-    {
-        "id": "1",
-        "identifier": "normal",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "2",
-        "identifier": "fighting",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "3",
-        "identifier": "flying",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "4",
-        "identifier": "poison",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "5",
-        "identifier": "ground",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "6",
-        "identifier": "rock",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "7",
-        "identifier": "bug",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "8",
-        "identifier": "ghost",
-        "generation_id": "1",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "9",
-        "identifier": "steel",
-        "generation_id": "2",
-        "damage_class_id": "2"
-    },
-    {
-        "id": "10",
-        "identifier": "fire",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "11",
-        "identifier": "water",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "12",
-        "identifier": "grass",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "13",
-        "identifier": "electric",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "14",
-        "identifier": "psychic",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "15",
-        "identifier": "ice",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "16",
-        "identifier": "dragon",
-        "generation_id": "1",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "17",
-        "identifier": "dark",
-        "generation_id": "2",
-        "damage_class_id": "3"
-    },
-    {
-        "id": "18",
-        "identifier": "fairy",
-        "generation_id": "6",
-        "damage_class_id": ""
-    },
-    {
-        "id": "10001",
-        "identifier": "unknown",
-        "generation_id": "2",
-        "damage_class_id": ""
-    },
-    {
-        "id": "10002",
-        "identifier": "shadow",
-        "generation_id": "3",
-        "damage_class_id": ""
-    }
-]
+{
+    "1": "normal",
+    "2": "fighting",
+    "3": "flying",
+    "4": "poison",
+    "5": "ground",
+    "6": "rock",
+    "7": "bug",
+    "8": "ghost",
+    "9": "steel",
+    "10": "fire",
+    "11": "water",
+    "12": "grass",
+    "13": "electric",
+    "14": "psychic",
+    "15": "ice",
+    "16": "dragon",
+    "17": "dark",
+    "18": "fairy",
+    "10001": "unknown",
+    "10002": "shadow"
+}
